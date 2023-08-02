@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{background-color:lightblue; font-size: 40px;}
+        h1{background-color: red; width:50%; border-radius: 30px;}
+    </style>
+
+<script>
+    function find() 
+    {
+        event.preventDefault();
+        let num= document.getElementById("num");
+        let ans = document.getElementById("ans");
+        if 
+        (num.value=="")
+        {
+            alert("Number is Empty");
+            ans.innerHTML="";
+            num.focus();
+            return;;
+        }
+        let n=parseInt(num.value);
+        let msg="";
+        if(n%2==0)
+        msg="Even";
+        else
+        msg="Odd";
+        ans.innerHTML=msg;
+    }
+</script>
+</head>
+<body>
+    <center>
+    <h1>Even odd Finder</h1>
+    <form onsubmit="find()">
+   
+    <input type="number" placeholder="Enter the integer" id="num"/>    
+    <br><br>
+    <input type="Submit" value="Find">    
+</form>
+<h2 id="ans"></h2>
+</center>
+</body>
+</html>
